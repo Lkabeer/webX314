@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div *ngIf="authService.afAuth.user | async as user" class="text-center">
+      <h1>Hello {{ user.displayName }}!</h1>
+      <button type="button" class="btn btn-primary" (click)="authService.signOut()">Logout</button>
+    </div>
+  </div>
+</div>
